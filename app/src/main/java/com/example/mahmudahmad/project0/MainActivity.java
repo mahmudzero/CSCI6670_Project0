@@ -11,9 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.inputmethod.InputMethodManager;
-
 import com.google.gson.*;
 import java.io.*;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             errorMessage = Toast.makeText(getApplicationContext(), "You cracked the code!", Toast.LENGTH_SHORT);
             errorMessage.show();
             attempts = 5;
+            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+            startActivity(intent);
         } else if(attempts > 0) {
             StringBuilder errorString = new StringBuilder("Number of attempts remaining: ");
             errorString.append(Integer.toString(attempts));
@@ -56,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
             errorMessage = Toast.makeText(getApplicationContext(), "No more attempts! You have failed.", Toast.LENGTH_SHORT);
             errorMessage.show();
             allowAttempts = false;
+            Intent intent = new Intent(MainActivity.this, Main3Activity.class);
+            startActivity(intent);
         }
     }
 
