@@ -8,29 +8,57 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/darkBlue"
     tools:context="com.example.mahmudahmad.project0.MainActivity">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         android:ems="10"
+        android:layout_marginTop="101dp"
+        android:id="@+id/editText"
+        android:background="@color/lightBlue"
+        android:textColorLink="@android:color/white"
+        android:hint="UserName"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp"
-        android:id="@+id/editText"
-        android:background="@android:color/darker_gray"
-        android:textColorLink="@android:color/white" />
+        android:paddingLeft="6dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="23dp"
         android:id="@+id/editText2"
+        android:background="@color/lightBlue"
+        android:hint="Password"
         android:layout_below="@+id/editText"
         android:layout_alignStart="@+id/editText"
-        android:background="@android:color/darker_gray" />
+        android:paddingLeft="6dp" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_marginTop="23dp"
+        android:background="@color/buttonColor"
+        android:onClick="onCancel" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignStart="@+id/editText2"
+        android:background="@color/buttonColor"
+        android:onClick="onButtonTap" />
+
 </RelativeLayout>
